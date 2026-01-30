@@ -4,7 +4,7 @@ title: Folder Sync
 legacyUrl: /support/solutions/articles/44001162190-folder-sync
 ---
 
-Folder sync allows you to copy content to folders and external hard drives, for backup as well as archiving in multiple resolutions. This is an [Emby Premiere](Emby-Premiere.md) feature.
+Folder sync allows you to copy content to folders and external hard drives, for backup as well as archiving in multiple resolutions. This is an [Emby Premiere](Emby-Premiere.md) server administration feature.
 
 When content is archived in multiple resolutions, Emby apps will automatically choose the version that is most efficient for them. This will help relieve stress on your server's CPU. The availability of these versions would depend on the permissions granted when setting up Folder Sync.
 
