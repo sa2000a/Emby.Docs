@@ -10,7 +10,7 @@ To set the optional DVR settings, click DVR in the administrator dashboard under
 
 These options should be self explanatory.  The first option allows you to set the amount Guide Data that is loaded.  You can manually set this from 1 to 14 days or leave it set to Auto. When you leave it set to Auto, Emby will choose the amount of days loaded based on how many channels you have defined to balance performance with the convenience of having as much guide data as possible.
 
-The next three options allow you to set the default recording path used.  It also allows you to set a specific parent folder where all Movies and all TV Shows are saved to.
+The next three options allow you to set the default recording path used within the existing libraries. It also allows you to set a specific parent folder where all Movies and all TV Shows are saved to.
 
 These 3 options are blank by default and the example above shows custom settings.
 
@@ -28,7 +28,7 @@ These next two sections are advanced functionality that won’t be covered here.
 
 You can find samples of scripts in the Emby forums shared by users and get help setting these up as well.
 
-If you’ve made any chances on the DVR Settings page click the Save button to finish.
+If you’ve made any changes on the DVR Settings page click the Save button to finish.
 
 
 

@@ -19,12 +19,14 @@ Setup of Live TV can be broken down into a few steps:
 * Add TV Guide Data Source(s)
 * Match your Channel Lineup to Guide Data (Channel Mapping)
 
+The LiveTV and DVR feature requires a valid [Emby Premiere](Emby-Premiere.md) subscription.
+
 ## Configure Your TV Tuner
 
 Out of the box, Emby Server currently supports the following TV Tuners:
 
 - [HDHomerun Network Tuner](HDHomeRun-Setup.md) (Models available for both OTA and Cable. Must support DLNA 2015+ model)
-- Hauppauge TV Tuners (on Emby Server for Windows - Requires Win TV 8.5 or greater to be installed)
+- [Hauppauge TV Tuners](Hauppauge-Setup.md) (on Emby Server for Windows - Requires WinTV 8.5 or greater to be installed)
 - [M3U Tuners](M3U-Tuners.md)  - M3U files (or urls). See examples of m3u files at [M3U Examples](M3U-Tuners.md#example-m3u)
 
 Support for additional tuners can be added by installing a [Live TV Plugin](Live-TV-Plugins.md).
