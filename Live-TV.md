@@ -48,16 +48,19 @@ Support for additional sources can be added by installing a [Live TV Plugin](Liv
 ## Match your Channel Lineup to Guide Data
 The final step of setting up Live TV is matching the tuner's stations to the Guide Data you have setup.
 
-* [Live TV Channel Mapping](Live-TV-Channel-Mapping.md)
+[Live TV Channel Mapping](Live-TV-Channel-Mapping.md)
 
-## DVR Settings (optional)
+## Live TV Advanced Settings (optional)
 
 You can optionally change a few options used for DVR purposes.  These options include:
+* Live stream buffer
 * Amount of days of Guide Data loaded
+* Option to wake the server for scheduled recordings
 * Default recording paths
 * Default Pre and Post recording padding times.  This allows you set recording to start X minutes early and finish Y minutes late.
+* Post-processing script to run after recording
 
-* [DVR Settings](DVR-Settings.md)
+[Live TV Advanced Settings](DVR-Settings.md)
 
 ## Emby Live TV & DVR is Ready to Use.
 Congratulations, your Emby Server should now be configured properly and ready to use for Live TV and DVR.
