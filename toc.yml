@@ -155,6 +155,8 @@
       href: Live-TV.md
     - name: Live TV Plugins
       href: Live-TV-Plugins.md
+    - name: Hauppauge Setup
+      href: Hauppauge-Setup.md
     - name: HDHomeRun Setup
       href: HDHomeRun-Setup.md
     - name: M3U Tuners
