@@ -309,6 +309,8 @@ For manually created port forward, you will need to login to the router and corr
 
 For automatically created port forward with uPnP and the emby server setting: **Enable automatic port mapping**, you will need to shutdown Emby Server, then reboot the router to clear the existing cached uPnP port forward and then launch Emby Server.
 
+If you are using Emby Connect, you may need to unlink and re-link the user account to the Emby Connect e-mail address to refresh the Emby Connect data.
+
 Exit Emby Apps and relaunch them.
 
 ## 2. Windows Network Profile
@@ -322,6 +324,8 @@ Check if the public IP Address for your network got changed. This does happen so
 If this happens regularly, look into using a domain name and DDNS service to periodically refresh the IP address. See section [External Public IP Address change](#external-public-ip-address-change) above. If you have a cgNAT IP address, you should be able to request a static public IP address from your ISP for a small fee. See section [cgNAT Double NAT](#cgnat-double-nat) above.
 
 You can test out access to the server with the new public ip address by adding the server manually on the Select Server screen and giving the public IP address and public port. Note that access through the public IP address may be blocked by routers if you try to test it out locally. Best to do this test externally and could be done on a mobile device connected through cellular connection and not wifi.
+
+If you are using Emby Connect, you may need to unlink and re-link the user account to the Emby Connect e-mail address to refresh the Emby Connect data.
 
 ## 4. Router Settings
 
