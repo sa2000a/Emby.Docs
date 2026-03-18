@@ -202,13 +202,11 @@ The default public / WAN ports are as follows:
 
 Set a different http and https port (where applicable) for each of the servers. If your first server used 8096 and 8920, then you only need to change the public ports for the other server(s) to use different port numbers.
 
-### Multiple Routers
+### Multiple Routers / Mesh Network Added
 
-If you have more than one router, eg an ISP provided router and also your own router, then that would lead to a **Double NAT** which would lead to failure to reach the server externally.
+If you have more than one router, eg an ISP provided router and also your own router, or you've added a Mesh Network, then that could lead to a **Double NAT** which would give rise to failure to reach the server externally.
 
-In such cases, to get round the problem, it is recommended that one router, e.g. the ISP router, is configured to run in Modem/Bridge mode leaving the other router to do the routing and any port forwarding.
-
-If both need to be running as routers, the configuration would be more complex, needing to cascade the port forward for the public port from the first router to the second, with the first router acting as a pass-through, and to have the actual required port forward to be setup on the 2nd router. Also the 2nd router would need to have its local IP Address as a DHCP reservation on the first router.
+To establish if you have a Double NAT and what steps you need to take to get round the issue, see [Multiple Routers Double NAT](#multiple-routers-double-nat) below. Basically you will have two ways to choose from, either by making sure there is only one operating as a router or to manually setting up port forwards to cascade all the way through.
 
 ### Locate Your External Address & Public Port
 
@@ -267,16 +265,38 @@ You can mitigate the impact of changes to the external IP address by exploring t
 
 ### Multiple Routers Double NAT
 
-If you have 2 routers, eg an ISP provided router and your own router, there will be a double NAT and port mappings will not work. A Double NAT can be confirmed by checking the Public IP address displayed by https://whatismyipaddress.com/ or https://canyouseeme.org and comparing it to the WAN IP address displayed within the router configuration dashboard, the router to which the emby server machine is connected. If the addresses do not match, then most likely you have a Double NAT.
+If you have 2 routers, eg an ISP provided router and your own router, there will be Double NAT and port forwarding will not work. Similarly, if you have added a Mesh Network then there could be a Double NAT. 
 
-To get round this, the options that you have are:
-1. Have one of the routers operate in Modem/Bridge mode, e.g. the ISP router. The other router would become the active router and handle the port forwards and port mapping. Consult the router manual for how to switch to Modem/Bridge mode.
-2. Have one of the routers operate as an Access Point, eg the ISP router becomes the router and your own router configured as an Access Point.
-3. Use both as routers but cascade the port forwards through the first router - acting as a Pass-Through. In this scenario, port mapping must be manual with manual port forward setup on both routers. As an example, if your server public http port is 32700 and https is enabled and is using public port 32800, you would do the following:
+A Double NAT can be confirmed by checking the Public IP address displayed by https://whatismyipaddress.com/ or https://canyouseeme.org and comparing it to the WAN IP address displayed within the router/mesh network control device settings, the one that the emby server machine is connected to. If the addresses do not match, then most likely you have a Double NAT.
+
+> [!Note]
+> A cgNAT public IP address may also show up as Double NAT. To establish if it is due to cgNAT, see [cgNAT Double NAT](#cgnat-double-nat) above. 
+> 
+
+If there is a Double NAT due to having multiple devices operating as network routers, you will need to make sure only one is acting as a router or a more complex option, to cascade the port forward all the way through to the Emby Server, going through both.
+
+If you have added a **Mesh Network**, you can set the device to operate as an **Access Point** and not a router. This would then leave your existing router to have the port forward.
+
+The following is an example for a **TP-Link Deco M9 Plus** Mesh Network. The **Deco** mobile app has in **Advanced Settings** an option for changing the operation mode.
+
+![](images/server/connectivity20.png)
+
+and in the following, you can see it is set to operate in a passive mode as an **Access Point**.
+
+![](images/server/connectivity21.png)
+
+In the case of an ISP Modem/Router and also having your own router, the best option here is to see if the ISP provided device can be set to operate in Modem / Bridge only mode and that would leave your router to manage the port forwarding and local network. You may need to contact your ISP if the modem/router settings are locked down.
+
+For this, you can also operate with the ISP Modem/Router acting as a router and your own router switched to be in Access Point mode.
+
+For both cases mentioned above, you can keep them operating as routers but you would then need to have a complex port forward setup where the port forward on the first router (ISP router) is manually setup and cascaded through to the second router/mesh network device and that would have the port forward to the Emby Server. In the example below reference to second router also means the Mesh Network main controlling unit.
+
+In this example, if your server public http port is 32700
 - Have the local IP address of the 2nd router as a DHCP reservation in the first router - so it remains fixed. You would need to find the Mac Hardware address of the WAN Port of the 2nd router and use that to specify a DHCP reservation for it in the first router
-- On the first router, setup a tcp port forward for http port 32700 to forward to port 32700 to the local IP address of the second router. And do the same for the https port - forwarding tcp 32800 to port 32800 to the local IP address of the second router.
+- On the first router, setup a tcp port forward for http port 32700 to forward to port 32700 to the local IP address of the second router.
 - On the second router, setup DHCP reservation for the Emby Server local IP address
-- On the second router, setup port forwards for the http public tcp port 32700 to forward to port 8096 to the local IP address of the emby server machine. And similarly, if secure connections are used, setup the port forward for the https tcp public port 32800 to forward to port 8920 to the local IP address of the emby server machine.
+- On the second router, setup port forward for the http public tcp port 32700 to forward to port 8096 to the local IP address of the emby server machine. 
+- If you have also enabled https and for example you have public port 32800 for that, then you would need to repeat the steps above to forward 32800 from first router to the second router and then forward 32800 to the emby server local IP Address to tcp port 8920.
 
 ### Multiple Servers - Public Port clash
 
@@ -333,7 +353,7 @@ Sometimes router settings get lost and any existing port forwards may disappear.
 
 
 
-The next checklist is to help with issues arising after a change. 
+**The next checklist is to help with issues arising after a change.** 
  
 ## 1. vpn added
 
@@ -343,9 +363,9 @@ See section [Use of vpn](#use-of-vpn) above.
 
 You may find that after switching ISP, you are now given a cgNAT IP address or that your public IP Address is now changing more frequently than before. See sections [cgNAT](#cgnat-double-nat) and [External Public IP Address change](#external-public-ip-address-change) above.
 
-## 3. Added a modem/router
+## 3. Added a modem/router or mesh network
 
-This may give rise to a double NAT setup. See [Double NAT](#multiple-routers-double-nat) section above.
+This may give rise to a double NAT setup. See [Multiple Routers Double NAT](#multiple-routers-double-nat) and [Multiple Routers / Mesh Network Added](#multiple-routers--mesh-network-added) sections above.
 
 ## 4. Added another Emby Server
 
