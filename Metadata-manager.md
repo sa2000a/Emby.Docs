@@ -28,7 +28,7 @@ This will open the **Refresh Metadata** options screen
 
 Selecting **Refresh** will pull fresh metadata from each of the databases that the server is configured to pull from for the library. In addition, it will download any images that may be missing (logos, disc images, posters, etc.).
 
-There are **two Refresh modes**:
+There are 2 **Refresh modes**:
 
 - Refreshing all metadata (the default option) will overwrite all of the fields with metadata from outside databases.
 - Refreshing only missing data will preserve all of the existing metadata and only populate the fields that are missing metadata.
@@ -133,7 +133,7 @@ To change the image used, you can select the "..." options button
 
 ![](images/server/metadatamanager16a.png)
 
-This will bring up a number of options:
+This will bring up a number of options, allowing you to edit the reference to the image through add or delete or specify a url, in addition to the search option:
 
 ![](images/server/metadatamanager17.png)
 
