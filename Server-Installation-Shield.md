@@ -87,7 +87,7 @@ There are several manual steps that need to be completed to install Emby Server 
 
 - Select the **OPEN** button on the **App installed** dialogue box.
 
-- If the app asks for storage permissions, please select OK.
+- If the app asks for storage permission, please select OK.
 
 ![Server Install Shield16](images/server/server_install_shield16a.png)
 
