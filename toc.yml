@@ -104,6 +104,8 @@
     items:
     - name: Playback Methods
       href: DirectPlay-Stream-Transcoding.md
+    - name: Search
+      href: Search.md
     - name: Collections
       href: Collections.md
       items:
