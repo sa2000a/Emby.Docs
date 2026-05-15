@@ -96,8 +96,23 @@
       href: Log-Files.md
     - name: Devices
       href: Devices.md
-    - name: Backing up Emby Server
+    - name: Backing up & Restoring Emby Server
       href: Backup.md
+      items:
+        - name: Backing Up Emby Server
+          href: Backup-Using-Plugin.md
+        - name: Restoring Last Backup
+          href: Backup-Restore-Last-Backup.md
+        - name: Restoring an Earlier Backup of the Database
+          href: Backup-Restore-Earlier-Backup.md
+        - name: Using Restore to migrate to a New System
+          href: Backup-Restore-To-New-System.md
+        - name: Using Restore to add an Additional Server
+          href: Backup-Restore-Add-New-Server.md
+        - name: Using Restore to Copy Playback state and Favorites
+          href: Backup-Restore-Playbacks-And-Favorites.md
+        - name: How to Backup Manually
+          href: Backup-Manual-Backups.md
     - name: Plugin Management
       href: Plugins.md
   - name: Features & Plugins
