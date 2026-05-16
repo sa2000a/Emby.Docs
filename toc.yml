@@ -99,8 +99,6 @@
     - name: Backing up & Restoring Emby Server
       href: Backup.md
       items:
-      - name: Backing up & Restoring Emby Server
-        href: Backup.md
       - name: Backing Up Emby Server
         href: Backup-Using-Plugin.md
       - name: Restoring Last Backup
