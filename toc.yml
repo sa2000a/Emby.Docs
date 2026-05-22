@@ -252,6 +252,10 @@
       href: Emby-Connect-for-Users.md
     - name: Keyboard and Remote Support
       href: Keyboard-and-Remote-Support.md
+  - name: Amazon Alexa
+    href: Alexa.md
+  - name: Android Mobile
+    href: Android-Mobile.md
   - name: Android TV
     items:
       - name: Android TV
@@ -260,12 +264,41 @@
         href: Android-File-Storage.md
       - name: Shield TV Direct File Access
         href: ShieldTV-Direct-File-Access.md
+  - name: Apple TV
+    href: Apple-TV.md
+  - name: Chromecast
+    href: Chromecast.md
+  - name: Emby for Kodi
+    href: Emby-for-Kodi.md
   - name: Fire TV
     items:
       - name: Amazon Fire TV
         href: Fire-TV.md
       - name: Manual Install on Fire Tablets
         href: Fire-TV-Manual-Install.md
+  - name: Google Home
+    href: Google-Home.md
+  - name: iOS
+    href: iOS.md
+  - name: Atmos on LG TV
+    href: LG-Why-not-Atmos.md
+  - name: Linux
+    href: apps/linux/Emby-Linux.md
+    items:
+      - name: Emby Linux
+        href: apps/linux/Emby-Linux.md
+      - name: FAQ
+        href: apps/linux/Emby-Linux-FAQ.md
+      - name: Beta Program
+        href: apps/linux/Emby-Linux-Beta-Program.md
+      - name: Platform Support
+        href: apps/linux/Emby-Linux-Platform-Support.md
+      - name: Commandline Flags
+        href: apps/linux/Emby-Linux-Flags.md
+  - name: Roku
+    href: Roku.md
+  - name: Web App
+    href: Web-Client.md
   - name: Windows
     href: apps/windows/Emby-Windows.md
     items:
@@ -310,39 +343,6 @@
             href: apps/xbox/features/Xbox-Feature-Remote-Control.md
           - name: Startup Animation
             href: apps/xbox/features/Xbox-Feature-StartAnim.md
-  - name: Linux
-    href: apps/linux/Emby-Linux.md
-    items:
-      - name: Emby Linux
-        href: apps/linux/Emby-Linux.md
-      - name: FAQ
-        href: apps/linux/Emby-Linux-FAQ.md
-      - name: Beta Program
-        href: apps/linux/Emby-Linux-Beta-Program.md
-      - name: Platform Support
-        href: apps/linux/Emby-Linux-Platform-Support.md
-      - name: Commandline Flags
-        href: apps/linux/Emby-Linux-Flags.md
-  - name: Android Mobile
-    href: Android-Mobile.md
-  - name: Apple TV
-    href: Apple-TV.md
-  - name: Google Home
-    href: Google-Home.md
-  - name: Atmos on LG TV
-    href: LG-Why-not-Atmos.md
-  - name: Web App
-    href: Web-Client.md
-  - name: Amazon Alexa
-    href: Alexa.md
-  - name: Chromecast
-    href: Chromecast.md
-  - name: iOS
-    href: iOS.md
-  - name: Roku
-    href: Roku.md
-  - name: Emby for Kodi
-    href: Emby-for-Kodi.md
 - name: Supplemental Articles
   items:
   - name: Beta Programs
