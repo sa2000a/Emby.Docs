@@ -7,8 +7,6 @@ For Emby Servers running on **[QNAP QTS](https://www.qnap.com/en-uk/operating-sy
 
 A shell script `QNAPEmbyCertRenew.sh` is provided that can be customized and scheduled to run daily, to check if the QNAP NAS has updated its SSL Certificate. If that is detected, the Emby Server SSL certificate pfx file would be replaced with one based on the renewed QNAP SSL certificate, with a password as specified in the script.
 
-_Thanks to Emby Forum user dieffe70 for providing the initial script and to user renefw for the extensive testing whilst developing the updated script._
-
 
 ## Key Points
 
@@ -44,6 +42,8 @@ _Thanks to Emby Forum user dieffe70 for providing the initial script and to user
 #!/bin/sh
 
 # QNAPEmbyCertRenew.sh - version created 30 May 2026
+
+# Script is based on one provided by dieffe70 https://emby.media/community/topic/113284-guide-ssl-qnap-certificate-and-emby-manual-and-automatic
 
 now="$(date)"
 

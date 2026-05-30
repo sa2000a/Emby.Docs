@@ -240,7 +240,7 @@
       href: Synology-Set-Permissions.md
     - name: HWA fails with RDP
       href: Hwa-Fails-with-RDP.md
-    - name: QNAP SSL certificate Renewal
+    - name: QNAP SSL Certificate Renewal
       href: QNAP-SSL-Certificate-Renewal.md
     - name: Manage Collections (Legacy)
       href: Collections-Manual-Migration.md
