@@ -4,10 +4,6 @@ title: Linux/Unix Permissions
 legacyUrl: /support/solutions/articles/44001962818-linux-unix-permissions
 ---
 
-Excellent advice from user Q-Droid on the Emby Forums
-
-
-
 This is an excerpt from a community thread by a member who wanted to allow other applications and Linux users on their server to access the media structure used by Emby. The member wanted shared read and write access to the libraries which may contain files and directories owned by different users.
 
 
